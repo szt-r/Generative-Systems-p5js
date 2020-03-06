@@ -103,11 +103,11 @@ class DottedLines extends Layer {
   }
 }
 
-class CenteredShapes extends Layer {
+class CenteredShape extends Layer {
   constructor() {
     super();
     this.randomShape = random(1)
-    this.shapeSize = floor(random(this.stepsOut / 2, this.stepsOut)) * this.singleStep;
+    this.shapeSize = floor(random(this.stepsOut / 2, this.stepsOut - 2)) * this.singleStep;
   }
 
   render() {

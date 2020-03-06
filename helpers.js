@@ -60,3 +60,46 @@ function myTriangle(center, radius, direction) {
     endShape(CLOSE);
   }
 }
+
+const layerConstructors = [
+  {
+    name: 'Outline Shape',
+    weight: 0.3,
+    init: () => new OutlineShape()
+  },
+  {
+    name: 'Centered Shape',
+    weight: 0.3,
+    init: () => new CenteredShape()
+  },
+  {
+    name: 'Circles',
+    weight: 0.3,
+    init: () => new Circles()
+  },
+  {
+    name: 'Simple Lines',
+    weight: 0.3,
+    init: () => new SimpleLines()
+  },
+  {
+    name: 'Dotted Lines',
+    weight: 0.3,
+    init: () => new DottedLines()
+  },
+  {
+    name: 'Ring of Shapes',
+    weight: 0.3,
+    init: () => new RingOfShapes()
+  },
+  {
+    name: 'Stepped Hexagons',
+    weight: 0.7,
+    init: () => new SteppedHexagons()
+  },
+  {
+    name: 'Test Lines',
+    weight: 1,
+    init: () => new TestLines()
+  },
+]

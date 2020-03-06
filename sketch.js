@@ -17,37 +17,16 @@ function setup() {
 }
 
 function draw() {
-  background(250);
-  testLines();
+  background(255);
 
-  // const dottedLines = new DottedLines()
-  // dottedLines.render()
+  layerConstructors.forEach(lcon => {
+    let picker = random(1);
+    if (picker > lcon.weight) {
+      layers.push(lcon.init())
+    }
+  })
 
-  // const centeredShapes = new CenteredShapes();
-  // centeredShapes.render();
+  layers.forEach(layer => layer.render());
 
-  // const ringOfShapes = new RingOfShapes();
-  // ringOfShapes.render();
-
-  const steppedHexagons = new SteppedHexagons();
-  steppedHexagons.render();
-  
-  // let picker = random(1);
-  // if (picker > 0.3) {
-  //   layers.push(new OutlineShape());
-  // }
-
-  // picker = random(1);
-  // if (picker > 0.3) {
-  //   layers.push(new SimpleLines());
-  // }
-
-  // picker = random(1);
-  // if (picker > 0.3) {
-  //   layers.push(new Circles());
-  // }
-
-  // layers.forEach(layer => layer.render());
-
-  // console.log(layers);
+  console.log(layers);
 }
