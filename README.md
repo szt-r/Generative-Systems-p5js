@@ -19,8 +19,8 @@ by Matthew Epler
   - 10 &ndash; Classes &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part10), [preview](https://editor.p5js.org/sztxr/sketches/v_XPWTlu)
   - 11 &ndash; Classes Cont. &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part11), [preview](https://editor.p5js.org/sztxr/sketches/AOlCMn7B)
   - 12 &ndash; Picker pt. 2 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part12), [preview](https://editor.p5js.org/sztxr/sketches/9k6gT1G2)
+  - 13 &ndash; New layers &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part13), [preview](https://editor.p5js.org/sztxr/sketches/vOxQMH_o)
  <!-- 
-  - 13 &ndash; ? &ndash; [code](), [preview]()
   - 14 &ndash; ? &ndash; [code](), [preview]()
   - 15 &ndash; ? &ndash; [code](), [preview]()
   - 16 &ndash; ? &ndash; [code](), [preview]()

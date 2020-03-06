@@ -18,23 +18,36 @@ function setup() {
 
 function draw() {
   background(250);
+  testLines();
+
+  // const dottedLines = new DottedLines()
+  // dottedLines.render()
+
+  // const centeredShapes = new CenteredShapes();
+  // centeredShapes.render();
+
+  // const ringOfShapes = new RingOfShapes();
+  // ringOfShapes.render();
+
+  const steppedHexagons = new SteppedHexagons();
+  steppedHexagons.render();
   
-  let picker = random(1);
-  if (picker > 0.3) {
-    layers.push(new OutlineShape());
-  }
+  // let picker = random(1);
+  // if (picker > 0.3) {
+  //   layers.push(new OutlineShape());
+  // }
 
-  picker = random(1);
-  if (picker > 0.3) {
-    layers.push(new SimpleLines());
-  }
+  // picker = random(1);
+  // if (picker > 0.3) {
+  //   layers.push(new SimpleLines());
+  // }
 
-  picker = random(1);
-  if (picker > 0.3) {
-    layers.push(new Circles());
-  }
+  // picker = random(1);
+  // if (picker > 0.3) {
+  //   layers.push(new Circles());
+  // }
 
-  layers.forEach(layer => layer.render());
+  // layers.forEach(layer => layer.render());
 
   // console.log(layers);
 }
