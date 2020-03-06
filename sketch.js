@@ -21,18 +21,9 @@ function draw() {
 }
 
 function testLines() {
-  const randomSides = random(1);
-  let numberOfShapes;
-  if (randomSides > 0.5) {
-    numberOfShapes = SIDES;
-  } else {
-    numberOfShapes = SIDES * 2;
-  }
-  // console.log(randomSides, numberOfShapes);
-
-  const randomColour = floor(random(0, PALETTE.length));
-  const strokeColour = PALETTE[randomColour];
-  // console.log(randomColour);
+  let numberOfShapes = randomSelectTwo ? SIDES : SIDES * 2;
+  
+  const strokeColour = getRandomFromPalette();
 
   noFill(0);
   push();
@@ -47,4 +38,14 @@ function testLines() {
     rotate(angle);
   }
   pop();
+}
+
+function randomSelectTwo() {
+  const randomNum = random(1); // between 0 and 1
+  return randomNum > 0.5 ? true : false;
+}
+
+function getRandomFromPalette() {
+  const randomColour = floor(random(0, PALETTE.length));
+  return PALETTE[randomColour];
 }
