@@ -17,12 +17,26 @@ function setup() {
 
 function draw() {
   background(250);
-  testLines();
+  // testLines();
   // outlineShape();
   // simpleLines();
-  circles();
+  // circles();
+  
+  let picker = random(1);
+  if (picker > 0.3) {
+    outlineShape();
+  }
+  
+  picker = random(1);
+  if (picker > 0.3) {
+    simpleLines();
+  }
+  
+  picker = random(1);
+  if (picker > 0.3) {
+    circles();
+  }
 }
-
 
 function circles() {
   const numberOfShapes = SIDES;
@@ -32,6 +46,7 @@ function circles() {
   const position = (CRYSTAL_SIZE / 2) - (shapeSize / 2);
   const strokeColour = getRandomFromPalette();
   
+  noFill();
   stroke(strokeColour);
   strokeWeight(1);
   push();
