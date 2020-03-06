@@ -17,45 +17,30 @@ function setup() {
 
 function draw() {
   background(250);
+    
+  const layer = new Circles();
+  console.log(layer);
+  layer.render();
+  
   // testLines();
   // outlineShape();
   // simpleLines();
   // circles();
   
-  let picker = random(1);
-  if (picker > 0.3) {
-    outlineShape();
-  }
+//   let picker = random(1);
+//   if (picker > 0.3) {
+//     outlineShape();
+//   }
   
-  picker = random(1);
-  if (picker > 0.3) {
-    simpleLines();
-  }
+//   picker = random(1);
+//   if (picker > 0.3) {
+//     simpleLines();
+//   }
   
-  picker = random(1);
-  if (picker > 0.3) {
-    circles();
-  }
-}
-
-function circles() {
-  const numberOfShapes = SIDES;
-  const angle = 360 / numberOfShapes;
-  const shapeSize = (CRYSTAL_SIZE / 2) * 0.93;
-  // position = outershape radius - innershape radius
-  const position = (CRYSTAL_SIZE / 2) - (shapeSize / 2);
-  const strokeColour = getRandomFromPalette();
-  
-  noFill();
-  stroke(strokeColour);
-  strokeWeight(1);
-  push();
-  translate(width / 2, height / 2);
-  for (let i = 0; i < numberOfShapes; i++) {
-    ellipse(position, 0, shapeSize, shapeSize);
-    rotate(angle);
-  }
-  pop();
+//   picker = random(1);
+//   if (picker > 0.3) {
+//     circles();
+//   }
 }
 
 function simpleLines() {
