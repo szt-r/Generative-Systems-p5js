@@ -18,8 +18,34 @@ function setup() {
 function draw() {
   background(250);
   // testLines();
-  outlineShape();
+  // outlineShape();
+  simpleLines();
 }
+
+function simpleLines() {
+  const stepsOut = 8;
+  const numSteps = randomSelectTwo() ? stepsOut : int(stepsOut * 1.25);
+  const step = (CRYSTAL_SIZE / 2) / numSteps; // (radius / number of steps)
+  const start = floor(random(0, numSteps));
+  const stop = floor(random(start, numSteps + 1));
+  
+  const numberOfShapes = randomSelectTwo() ? SIDES : SIDES * 2;
+  const strokeColour = getRandomFromPalette();
+  const weight = randomSelectTwo() ? 1 : 3;
+  const angle = 360 / numberOfShapes;
+
+  noFill();
+  stroke(strokeColour);
+  strokeWeight(weight);
+  push();
+  translate(width / 2, height / 2);
+  for (let i = 0; i < numberOfShapes; i++) {
+    line(start * step, 0, stop * step, 0);
+    rotate(angle);
+  }
+  pop();
+}
+
 
 function outlineShape() {
   const strokeColour = getRandomFromPalette();
