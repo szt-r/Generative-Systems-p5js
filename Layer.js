@@ -106,7 +106,7 @@ class DottedLines extends Layer {
 class CenteredShapes extends Layer {
   constructor() {
     super();
-    this.randomShape = random(1);
+    this.randomShape = random(1)
     this.shapeSize = floor(random(this.stepsOut / 2, this.stepsOut)) * this.singleStep;
   }
 
@@ -116,9 +116,9 @@ class CenteredShapes extends Layer {
     push();
     translate(width / 2, height / 2);
     if (this.randomShape < 0.1) {
-      rect(0, 0, this.shapeSize * 2)
+      rect(0, 0, this.shapeSize * 2, this.shapeSize * 2);
     } else if (this.randomShape >= 0.1 && this.randomShape < 0.6) {
-      ellipse(0, 0, this.shapeSize * 2)
+      ellipse(0, 0, this.shapeSize * 2, this.shapeSize * 2);
     } else if (this.randomShape >= 0.6) {
       rotate(this.angle / 2);
       hexagon(0, 0, this.shapeSize);
