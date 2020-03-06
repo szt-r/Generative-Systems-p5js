@@ -18,8 +18,8 @@ by Matthew Epler
 - #### **Intermediate**
   - 10 &ndash; Classes &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part10), [preview](https://editor.p5js.org/sztxr/sketches/v_XPWTlu)
   - 11 &ndash; Classes Cont. &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part11), [preview](https://editor.p5js.org/sztxr/sketches/AOlCMn7B)
+  - 12 &ndash; ? &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part12), [preview](https://editor.p5js.org/sztxr/sketches/9k6gT1G2)
  <!-- 
-  - 12 &ndash; ? &ndash; [code](), [preview]()
   - 13 &ndash; ? &ndash; [code](), [preview]()
   - 14 &ndash; ? &ndash; [code](), [preview]()
   - 15 &ndash; ? &ndash; [code](), [preview]()

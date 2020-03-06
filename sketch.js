@@ -1,6 +1,7 @@
 const CRYSTAL_SIZE = 500;
 const SIDES = 6;
 let PALETTE = [];
+const layers = [];
 
 function setup() {
   createCanvas(530, 530, SVG);
@@ -17,36 +18,23 @@ function setup() {
 
 function draw() {
   background(250);
-    
-  const circles = new Circles();
-  circles.render();
-  // console.log(circles);
+  
+  let picker = random(1);
+  if (picker > 0.3) {
+    layers.push(new OutlineShape());
+  }
 
-  const simpleLines = new SimpleLines();
-  simpleLines.render();
-  // console.log(simpleLines);
+  picker = random(1);
+  if (picker > 0.3) {
+    layers.push(new SimpleLines());
+  }
 
-  const outlineShape = new OutlineShape();
-  outlineShape.render();
-  // console.log(outlineShape);
-  
-  // testLines();
-  // outlineShape();
-  // simpleLines();
-  // circles();
-  
-//   let picker = random(1);
-//   if (picker > 0.3) {
-//     outlineShape();
-//   }
-  
-//   picker = random(1);
-//   if (picker > 0.3) {
-//     simpleLines();
-//   }
-  
-//   picker = random(1);
-//   if (picker > 0.3) {
-//     circles();
-//   }
+  picker = random(1);
+  if (picker > 0.3) {
+    layers.push(new Circles());
+  }
+
+  layers.forEach(layer => layer.render());
+
+  // console.log(layers);
 }
