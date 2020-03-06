@@ -6,17 +6,17 @@ by Matthew Epler
 - #### **Beginner**
   - 00 &ndash; Introduction
   - 01 &ndash; What are Generative Systems?
-  - 02 &ndash; push/pop, translate, rotate &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/At2XmYQr)
-  - 03 &ndash; Design constrains &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/b2ndumPv)
-  - 04 &ndash; Using `random()` &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/t0w73sFb)
-  - 05 &ndash; Refactoring &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/sYwE6yYn)
-  - 06 &ndash; Outline shape &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/D9V0wz6C)
-  - 06 &ndash; Simple lines &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/fyc5hAVv)
-  - 06 &ndash; Circles &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/Ziy_vZeO)
-  - 06 &ndash; Random combos &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/JsKoPor_)
+  - 02 &ndash; push/pop, translate, rotate &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part2), [preview](https://editor.p5js.org/sztxr/sketches/At2XmYQr)
+  - 03 &ndash; Design constrains &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part3), [preview](https://editor.p5js.org/sztxr/sketches/b2ndumPv)
+  - 04 &ndash; Using `random()` &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part4), [preview](https://editor.p5js.org/sztxr/sketches/t0w73sFb)
+  - 05 &ndash; Refactoring &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part5), [preview](https://editor.p5js.org/sztxr/sketches/sYwE6yYn)
+  - 06 &ndash; Outline shape &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part6), [preview](https://editor.p5js.org/sztxr/sketches/D9V0wz6C)
+  - 07 &ndash; Simple lines &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part7), [preview](https://editor.p5js.org/sztxr/sketches/fyc5hAVv)
+  - 08 &ndash; Circles &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part8), [preview](https://editor.p5js.org/sztxr/sketches/Ziy_vZeO)
+  - 09 &ndash; Random combos &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part9), [preview](https://editor.p5js.org/sztxr/sketches/JsKoPor_)
 
 - #### **Intermediate**
-  - 10 &ndash; Classes &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/v_XPWTlu)
+  - 10 &ndash; Classes &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part10), [preview](https://editor.p5js.org/sztxr/sketches/v_XPWTlu)
   - 11 &ndash; Classes Cont. &ndash; [code](), [preview](https://editor.p5js.org/sztxr/sketches/AOlCMn7B)
  <!-- 
   - 12 &ndash; ? &ndash; [code](), [preview]()
