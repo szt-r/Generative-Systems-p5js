@@ -17,12 +17,30 @@ function setup() {
 
 function draw() {
   background(250);
-  testLines();
+  // testLines();
+  outlineShape();
+}
+
+function outlineShape() {
+  const strokeColour = getRandomFromPalette();
+  const weight = randomSelectTwo() ? 1 : 3;
+  const hexagonTrue = randomSelectTwo();
+
+  stroke(strokeColour);
+  strokeWeight(weight);
+  push();
+  translate(width / 2, height / 2);
+  if (hexagonTrue) {
+    hexagon(0, 0, CRYSTAL_SIZE / 2);
+  } else {
+    ellipse(0, 0, CRYSTAL_SIZE, CRYSTAL_SIZE);
+  }
+  pop();
 }
 
 function testLines() {
   let numberOfShapes = randomSelectTwo ? SIDES : SIDES * 2;
-  
+
   const strokeColour = getRandomFromPalette();
 
   noFill(0);
@@ -38,14 +56,4 @@ function testLines() {
     rotate(angle);
   }
   pop();
-}
-
-function randomSelectTwo() {
-  const randomNum = random(1); // between 0 and 1
-  return randomNum > 0.5 ? true : false;
-}
-
-function getRandomFromPalette() {
-  const randomColour = floor(random(0, PALETTE.length));
-  return PALETTE[randomColour];
 }
