@@ -17,9 +17,30 @@ function setup() {
 
 function draw() {
   background(250);
-  // testLines();
+  testLines();
   // outlineShape();
-  simpleLines();
+  // simpleLines();
+  circles();
+}
+
+
+function circles() {
+  const numberOfShapes = SIDES;
+  const angle = 360 / numberOfShapes;
+  const shapeSize = (CRYSTAL_SIZE / 2) * 0.93;
+  // position = outershape radius - innershape radius
+  const position = (CRYSTAL_SIZE / 2) - (shapeSize / 2);
+  const strokeColour = getRandomFromPalette();
+  
+  stroke(strokeColour);
+  strokeWeight(1);
+  push();
+  translate(width / 2, height / 2);
+  for (let i = 0; i < numberOfShapes; i++) {
+    ellipse(position, 0, shapeSize, shapeSize);
+    rotate(angle);
+  }
+  pop();
 }
 
 function simpleLines() {
@@ -46,7 +67,6 @@ function simpleLines() {
   pop();
 }
 
-
 function outlineShape() {
   const strokeColour = getRandomFromPalette();
   const weight = randomSelectTwo() ? 1 : 3;
@@ -65,7 +85,7 @@ function outlineShape() {
 }
 
 function testLines() {
-  let numberOfShapes = randomSelectTwo ? SIDES : SIDES * 2;
+  let numberOfShapes = randomSelectTwo() ? SIDES : SIDES * 2;
 
   const strokeColour = getRandomFromPalette();
 
