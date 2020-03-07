@@ -23,9 +23,9 @@ by Matthew Epler
   - 14 &ndash; Picker pt. 3 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part14), [preview](https://editor.p5js.org/sztxr/sketches/8FAqZGNn)
   - 15 &ndash; Crystal Class &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part15), [preview](https://editor.p5js.org/sztxr/sketches/H1gCFzJZ)
   - 16 &ndash; Drawing with a grid &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part16), [preview](https://editor.p5js.org/sztxr/sketches/SMdlVQ46)
- <!-- 
-  - 17 &ndash; ? &ndash; [code](), [preview]()
+  - 17 &ndash; Exporting SVG &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part17), [preview](https://editor.p5js.org/sztxr/sketches/oz_85rS1)
 
+ <!-- 
 - #### **Advanced**
   - 18 &ndash; ? &ndash; [code](), [preview]()
   - 19 &ndash; ? &ndash; [code](), [preview]()
