@@ -1,21 +1,21 @@
 // HELPER FUNCTIONS
-function randomSelectTwo() {
+const randomSelectTwo = () => {
   const randomNum = random(1); // between 0 and 1
   return randomNum > 0.5 ? true : false;
 }
 
-function getRandomFromPalette() {
+const getRandomFromPalette = () => {
   const randomColour = floor(random(0, PALETTE.length));
   return PALETTE[randomColour];
 }
 
-function pointOnCircle(posX, posY, radius, angle) {
+const pointOnCircle = (posX, posY, radius, angle) => {
   const x = posX + radius * cos(angle);
-  const y = posX + radius * sin(angle);
+  const y = posY + radius * sin(angle);
   return createVector(x, y);
 }
 
-function hexagon(posX, posY, radius) {
+const hexagon = (posX, posY, radius) => {
   const rotAngle = 360 / 6;
   beginShape();
   for (let i = 0; i < 6; i++) {
@@ -25,27 +25,34 @@ function hexagon(posX, posY, radius) {
   endShape(CLOSE);
 }
 
-function testLines() {
-  let numberOfShapes = randomSelectTwo() ? SIDES : SIDES * 2;
+const testLines = (state) => {
+  state.numOfShapes = randomSelectTwo() ? state.sides : state.sides * 2;
+  state.angle = 360 / state.numOfShapes;
 
-  const strokeColour = getRandomFromPalette();
-
-  noFill(0);
-  push();
-  translate(width / 2, height / 2);
-  stroke(PALETTE[0]);
-  ellipse(0, 0, CRYSTAL_SIZE, CRYSTAL_SIZE);
-
-  stroke(strokeColour);
-  const angle = 360 / numberOfShapes;
-  for (let i = 0; i < numberOfShapes; i++) {
-    line(0, 0, 0, CRYSTAL_SIZE / 2);
-    rotate(angle);
-  }
-  pop();
+  return ({
+    name: 'Test Lines',
+    state,
+    render: () => {
+      noFill(0);
+      stroke(state.layerColour);
+      strokeWeight(state.thickStroke);
+      push();
+      // translate(width / 2, height / 2);     
+      if (state.lines) {
+        for (let i = 0; i < 360 - 0.1; i += state.angle) {
+          line(0, 0, 0, CRYSTAL_SIZE / 2);
+          rotate(state.angle);
+        }
+      }
+      if (state.circle) {
+        ellipse(0, 0, CRYSTAL_SIZE, CRYSTAL_SIZE);
+      }
+      pop();
+    }
+  })
 }
 
-function myTriangle(center, radius, direction) {
+const myTriangle = (center, radius, direction) => {
   if (direction) {
     beginShape();
     vertex(center + radius * cos(0), radius * sin(0));
@@ -65,41 +72,89 @@ const layerConstructors = [
   {
     name: 'Outline Shape',
     weight: 0.3,
-    init: () => new OutlineShape()
+    init: (props) => outlineShape({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Centered Shape',
     weight: 0.3,
-    init: () => new CenteredShape()
+    init: (props) => centeredShape({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Circles',
     weight: 0.3,
-    init: () => new Circles()
+    init: (props) => circles({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Simple Lines',
     weight: 0.3,
-    init: () => new SimpleLines()
+    init: (props) => simpleLines({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Dotted Lines',
     weight: 0.3,
-    init: () => new DottedLines()
+    init: (props) => dottedLines({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Ring of Shapes',
     weight: 0.3,
-    init: () => new RingOfShapes()
+    init: (props) => ringOfShapes({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Stepped Hexagons',
     weight: 0.7,
-    init: () => new SteppedHexagons()
+    init: (props) => steppedHexagons({
+      ...props,
+      ...setState(state)
+    })
   },
   {
     name: 'Test Lines',
     weight: 1,
-    init: () => new TestLines()
+    init: (props) => testLines({
+      lines: false,
+      circle: false,
+      ...props,
+      ...setState(state)
+    })
   },
 ]
+
+const makeCrystal = (pos) => {
+  const layers = layerConstructors
+    .map(lcon => {
+      let picker = random(1);
+      const draw = picker > lcon.weight;
+      // const draw = lcon.name === 'Test Lines';
+      return lcon.init({ pos, draw });
+    })
+  return layers;
+}
+
+const drawCrystal = (crystal) => {
+  crystal.forEach(layer => {
+    if (layer.state.draw) {
+      push();
+      translate(layer.state.pos.x, layer.state.pos.y);
+      layer.render();
+      pop();
+    }
+  });
+}

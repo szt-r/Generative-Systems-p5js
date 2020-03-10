@@ -19,6 +19,7 @@ const circles = (state) => {
 
   return ({
     name: 'Circles',
+    state,
     render: () => {
       noFill();
       stroke(state.layerColour);
@@ -45,6 +46,7 @@ const simpleLines = (state) => {
 
   return ({
     name: 'Simple Lines',
+    state,
     render: () => {
       noFill();
       stroke(state.layerColour);
@@ -66,6 +68,7 @@ const outlineShape = (state) => {
 
   return ({
     name: 'Outline Shape',
+    state,
     render: () => {
       stroke(state.layerColour);
       strokeWeight(state.weight);
@@ -89,6 +92,7 @@ const dottedLines = (state) => {
 
   return ({
     name: 'Dotted Lines',
+    state,
     render: () => {
       fill(state.layerColour);
       noStroke();
@@ -111,6 +115,7 @@ const centeredShape = (state) => {
 
   return ({
     name: 'Centered Shape',
+    state,
     render: () => {
       fill(state.layerColour);
       noStroke();
@@ -147,6 +152,7 @@ const ringOfShapes = (state) => {
 
   return ({
     name: 'Ring of Shapes',
+    state,
     render: () => {
       stroke(state.layerColour);
       fill(state.fillColour);
@@ -179,6 +185,7 @@ const steppedHexagons = (state) => {
 
   return ({
     name: 'Stepped Hexagons',
+    state,
     render: () => {
       stroke(state.layerColour);
       noFill();
