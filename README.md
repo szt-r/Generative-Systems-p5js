@@ -28,5 +28,5 @@ by Matthew Epler
 - #### **Advanced**
   - 18 &ndash; Composition pt. 1 &ndash; Intro
   - 19 &ndash; Composition pt. 3 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part19), [preview](https://editor.p5js.org/sztxr/sketches/rNW2c6dT)
-  - 20 &ndash; Composition pt. 3 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part20), [preview](https://editor.p5js.org/sztxr/sketches/nxnDRs73)
+  - 20 &ndash; Composition pt. 2 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part20), [preview](https://editor.p5js.org/sztxr/sketches/nxnDRs73)
   - 21 &ndash; Composition pt. 4 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part21), [preview](https://editor.p5js.org/sztxr/sketches/00T6uMak)
