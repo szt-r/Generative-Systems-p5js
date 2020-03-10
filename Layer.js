@@ -1,35 +1,37 @@
-class Layer {
-  constructor() {
-    this.sides = SIDES;
-    this.numOfShapes = this.sides;
-    this.angle = 360 / this.numOfShapes;
-    this.stepsOut = 8;
-    this.singleStep = (CRYSTAL_SIZE / 2) / this.stepsOut;
-    this.thinStroke = 1;
-    this.thickStroke = 3;
-    this.layerColour = getRandomFromPalette();
-  }
+const state = {
+  sides: SIDES,
+  stepsOut: 8,
+  thinStroke: 1,
+  thickStroke: 3,
 }
 
-class Circles extends Layer {
-  constructor() {
-    super();
-    this.shapeSize = (CRYSTAL_SIZE / 2) * 0.93;
-    this.position = (CRYSTAL_SIZE / 2) - (this.shapeSize / 2); // position = outer shape radius - inner shape radius
-  }
+const setState = (state) => {
+  state.numOfShapes = state.sides;
+  state.angle = 360 / state.numOfShapes;
+  state.singleStep = (CRYSTAL_SIZE / 2) / state.stepsOut;
+  state.layerColour = getRandomFromPalette();
+  return state;
+}
 
-  render() {
-    noFill();
-    stroke(this.layerColour);
-    strokeWeight(1);
-    push();
-    // translate(width / 2, height / 2);
-    for (let i = 0; i < this.numOfShapes; i++) {
-      ellipse(this.position, 0, this.shapeSize, this.shapeSize);
-      rotate(this.angle);
+const circles = (state) => {
+  state.shapeSize = (CRYSTAL_SIZE / 2) * 0.93;
+  state.position = (CRYSTAL_SIZE / 2) - (state.shapeSize / 2); // position = outer shape radius - inner shape radius
+
+  return ({
+    name: 'circles',
+    render: () => {
+      noFill();
+      stroke(state.layerColour);
+      strokeWeight(1);
+      push();
+      // translate(width / 2, height / 2);
+      for (let i = 0; i < state.numOfShapes; i++) {
+        ellipse(state.position, 0, state.shapeSize, state.shapeSize);
+        rotate(state.angle);
+      }
+      pop();
     }
-    pop();
-  }
+  })
 }
 
 class SimpleLines extends Layer {

@@ -25,10 +25,10 @@ by Matthew Epler
   - 16 &ndash; Drawing with a grid &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part16), [preview](https://editor.p5js.org/sztxr/sketches/SMdlVQ46)
   - 17 &ndash; Exporting SVG &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part17), [preview](https://editor.p5js.org/sztxr/sketches/oz_85rS1)
 
- <!-- 
 - #### **Advanced**
-  - 18 &ndash; ? &ndash; [code](), [preview]()
-  - 19 &ndash; ? &ndash; [code](), [preview]()
-  - 20 &ndash; ? &ndash; [code](), [preview]()
-  - 21 &ndash; ? &ndash; [code](), [preview]()
+  - 18 &ndash; Composition pt. 1 &ndash; Intro
+  - 19 &ndash; Composition pt. 3 &ndash; [code](https://github.com/sztxr/Generative-Systems-p5js/tree/part19), [preview](https://editor.p5js.org/sztxr/sketches/rNW2c6dT)
+ <!-- 
+  - 20 &ndash; Composition pt. 3 &ndash; [code](), [preview]()
+  - 21 &ndash; Composition pt. 4 &ndash; [code](), [preview]()
   -->
